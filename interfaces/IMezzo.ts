@@ -1,10 +1,12 @@
 import { IUtente } from '../interfaces/IUtente';
+import { StatoMezzo } from '../enums/StatoMezzo';
+import { TipoMezzo } from '../enums/TipoMezzo';
 
 export interface IMezzo {
 
-    tipo: "bici" | "scooter" | "monopattino";
+    tipo: TipoMezzo;
     id: number;
-    stato: "disponibile" | "in uso";
+    stato: StatoMezzo;
 
     assegnaUtente(utente: IUtente): void;
 }
